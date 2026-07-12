@@ -91,4 +91,3 @@ shop-management-system/
 - [ ] Phase 6 — Inventory & Reports
 - [ ] Phase 7 — Frontend
 - [ ] Phase 8 — Testing, Polish & Documentation
-# Shop-Management-System
