@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in — Shop Management System</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="login-screen">
+    <div class="login-card">
+      <div class="mark">SM</div>
+      <h1>Shop Management</h1>
+      <p class="sub">Sign in to open the ledger.</p>
+
+      <div id="login-alert"></div>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="username">Username or email</label>
+          <input type="text" id="username" name="username" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="login-submit">Log in</button>
+      </form>
+
+      <p class="hint" style="margin-top:16px; font-size:0.78rem;">
+        No account yet? The first person to register becomes the admin —
+        ask your admin to create a staff account for you.
+      </p>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

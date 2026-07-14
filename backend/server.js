@@ -14,6 +14,11 @@ app.use(express.json());
 // Serve uploaded product images statically, e.g. http://localhost:5000/uploads/products/xyz.jpg
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Serve the frontend (Phase 7) statically so pages + API share one origin —
+// e.g. http://localhost:5000/pages/login.html — no CORS/localStorage headaches.
+app.use(express.static(path.join(__dirname, '../frontend')));
+app.get('/', (req, res) => res.redirect('/pages/login.html'));
+
 // Health check route — confirms the server is up
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Shop Management System backend is running' });
