@@ -14,7 +14,7 @@ const NAV_MODULES = [
   { id: 'customers', label: 'Customers', href: '/pages/customers.html', icon: '&#9786;', roles: ['admin', 'staff'], built: true },
 
   { section: 'Transactions' },
-  { id: 'purchases', label: 'Purchases', href: '/pages/purchases.html', icon: '&#8595;', roles: ['admin', 'staff'], built: false },
+  { id: 'purchases', label: 'Purchases', href: '/pages/purchases.html', icon: '&#8595;', roles: ['admin', 'staff'], built: true },
   { id: 'sales', label: 'Sales', href: '/pages/sales.html', icon: '&#8593;', roles: ['admin', 'staff'], built: false },
 
   { section: 'Stock' },

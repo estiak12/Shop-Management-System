@@ -868,6 +868,152 @@ tbody tr:hover { background: var(--paper); }
   white-space: nowrap;
 }
 
+/* ==========================================================================
+   Invoice builder (Purchases / Sales) — line-item table with inline inputs
+   ========================================================================== */
+
+.invoice-header-fields {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.invoice-header-fields .field { margin-bottom: 0; min-width: 220px; flex: 1; }
+
+.line-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4px;
+}
+
+.line-items-table th {
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  padding: 8px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.line-items-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: middle;
+}
+
+.line-items-table select,
+.line-items-table input {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  font-size: 0.85rem;
+}
+.line-items-table select:focus,
+.line-items-table input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  outline: none;
+}
+
+.line-items-table input.qty-input,
+.line-items-table input.price-input { width: 90px; font-family: var(--font-mono); }
+.line-items-table td.subtotal-cell {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.line-items-table .stock-hint {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+.line-items-table .stock-hint.warn { color: var(--brick); }
+
+.remove-row-btn {
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  cursor: pointer;
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: var(--radius-sm);
+}
+.remove-row-btn:hover { color: var(--brick); background: var(--brick-soft); }
+
+.add-row-btn {
+  margin-top: 8px;
+}
+
+.totals-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 8px 4px;
+  margin-top: 8px;
+  border-top: 2px solid var(--ink);
+}
+.totals-bar .totals-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.totals-bar .totals-value {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.invoice-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tab-strip {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+.tab-strip button {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.87rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.tab-strip button.active {
+  color: var(--accent-dark);
+  border-bottom-color: var(--accent);
+}
+.tab-strip button:hover:not(.active) { color: var(--ink); }
+
+.detail-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  font-size: 0.87rem;
+  margin-bottom: 16px;
+}
+.detail-list dt { color: var(--text-faint); }
+.detail-list dd { margin: 0; color: var(--text); }
+
 /* Utility */
 .flex { display: flex; }
 .flex-between { display: flex; align-items: center; justify-content: space-between; }
